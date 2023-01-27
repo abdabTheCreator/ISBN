@@ -1,10 +1,12 @@
 #!/usr/bin/ruby -w
 
-#! Globals 
-isbn = [9,7,8,0,1,4,3,0,0,7,2,3]
-multiplied_array = isbn.map.with_index{|x,i| i % 2 == 0 ? x : x * 3 } 
-sum_of_numbers = multiplied_array.inject(0, :+)
 
+isbn = [9,7,8,0,1,4,3,0,0,7,2,3]
+#! Multiply every other index by 3 
+multiplied_array = isbn.map.with_index{|x,i| i % 2 == 0 ? x : x * 3 } 
+
+#! calculate the sum 
+sum_of_numbers = multiplied_array.inject(0, :+)
 
 def set_last_digit(num)
     mod = num % 10
